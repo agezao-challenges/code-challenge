@@ -4,6 +4,7 @@ import {
   Box,
 } from "@chakra-ui/core";
 import Topbar from '../../components/Topbar/Topbar';
+import MarketSummary from '../../components/MarketSummary/MarketSummary';
 
 export default (props: any): React.ReactElement => {
   return (
@@ -20,7 +21,7 @@ export default (props: any): React.ReactElement => {
         p={6}
         overflow="hidden"
       >
-        cool
+        <MarketSummary />
       </Box>
     </React.Fragment>
   );
