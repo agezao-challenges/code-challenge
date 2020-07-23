@@ -9,8 +9,6 @@ import { RiSunLine, RiMoonLine } from 'react-icons/ri';
 export default (): React.ReactElement => {
   const { colorMode, toggleColorMode } = useColorMode();
 
-  console.log(colorMode);
-
   return (
     <Box
       px={6}
