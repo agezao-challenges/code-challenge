@@ -1,3 +1,37 @@
+## Personal log:
+
+1. An overview (main) page with the list/table of 25 coins sorted by the highest market cap
+
+- [x] We want you to make the page with exactly the same column headers
+- [x] This page also contains a search box (search icon can be found in ui-examples folder) that enables users to search based on coin name. Search results will replace the default data
+- [x] We would like the average price of each coin pair to USD
+- [x] Show the coin icons
+- [x] Search only based on coin name is sufficient
+
+2. A page showing the coin pairs per exhange in the detail card view
+
+- [x] This page should contains cards of coin pairs and the info like the example
+- [x] This page data is based on one of the 25 coins that we are showing in step 1
+- [x] Showing icons is not required
+- [x] If it's not clear, this might help: https://coinmarketcap.com/currencies/bitcoin/markets
+
+-
+
+- [x] Routing and navigation
+- [x] ES6 and React Hooks
+- [x] Typescript Typing
+- [x] Modularity and reusability of your code (think about components)
+- [x] Mobile first responsive implementation of the pages
+- [x] Search
+- [x] Bonus (optional): Theme toggle for dark mode
+
+
+
+
+To anyone reading this: It was fun, and I learned a couple of things in the process so it was definitely more than worthwhile. Thanks for the challenge :)
+
+<hr />
+
 # Frontend code challenge
 
 ## Cryptocurrency Single Page App
