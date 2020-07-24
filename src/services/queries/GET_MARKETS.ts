@@ -1,31 +1,22 @@
 import { gql } from '@apollo/client'
 
 export const GET_MARKETS = gql`
-  query GetMarkets($limit: Int, $searchQuery: String)  {
-    assets(
+  query GetMarkets($symbol: String) {
+    markets(
       filter: {
-        assetName: { _like: $searchQuery }
-      },
-      sort: [{marketCapRank: ASC}],
-      page: {limit: $limit}
+        baseSymbol: { _eq: $symbol }
+      }
     )
     {
-      assetName
-      assetSymbol
-      marketCap
-      marketCapRank
-      markets (
-        filter: {
-          _or: [
-            {marketSymbol: { _like: "%/USD" }}
-            {marketSymbol: { _like: "%/USDT" }}
-          ]
-        }
-      ) {
-        ticker {
-          lastPrice
-          baseVolume
-        }
+      exchangeSymbol
+      quoteSymbol
+      baseSymbol
+      ticker {
+        percentChange
+        lastPrice
+        lowPrice
+        highPrice
+        baseVolume
       }
     }
   }
