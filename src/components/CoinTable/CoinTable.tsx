@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
+import { Link } from 'react-router-dom';
 import {
   Box,
   Spinner,
   Text,
   theme,
-  useColorMode,
 } from "@chakra-ui/core";
 import ReactImageFallback from "react-image-fallback";
 import { calculateWeightedMeanOfTickers } from '../../utils';
 import { IAsset } from '../../Models/Asset';
-import { GET_MARKETS } from '../../services/queries/GET_MARKETS';
 import { ITicker } from '../../Models/Ticker';
+import { GET_ASSETS } from '../../services/queries/GET_ASSETS';
 
 export default (props: { searchQuery?: String }): React.ReactElement => {
   const [limit, setLimit] = useState<number>(25);
 
   const { loading, error, data } =
     useQuery<{assets: IAsset[]}>(
-      GET_MARKETS,
+      GET_ASSETS,
       {
         variables: {
           limit,
@@ -73,7 +73,7 @@ export const ValueRow: React.FC<IAsset> = ({ assetName, assetSymbol, marketCap, 
 
   return (
     <tr>
-      <td>{assetName}</td>
+      <td><Link to={`/currencies/${assetSymbol}/markets`}>{assetName}</Link></td>
       <td>{assetSymbol}/USD</td>
       <td>
         <ReactImageFallback
