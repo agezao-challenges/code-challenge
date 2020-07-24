@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet";
 import {
   Box,
 } from "@chakra-ui/core";
-import Topbar from '../../components/Topbar/Topbar';
 import MarketSummary from '../../components/MarketSummary/MarketSummary';
 
 export default (props: any): React.ReactElement => {
@@ -12,8 +11,6 @@ export default (props: any): React.ReactElement => {
       <Helmet>
         <title>Home • CoinMarketCap</title>
       </Helmet>
-
-      <Topbar />
 
       <Box
         margin="0 auto"
