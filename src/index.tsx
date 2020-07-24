@@ -5,6 +5,7 @@ import { ApolloProvider } from '@apollo/client';
 import apolloClient from './infrastructure/apollo-client';
 import themeConfig from './infrastructure/theme-config';
 import * as serviceWorker from "./serviceWorker";
+import Topbar from './components/Topbar/Topbar';
 import { Router } from './routes';
 import './index.scss';
 
@@ -15,6 +16,7 @@ ReactDOM.render(
         <CSSReset config={themeConfig} />
 
         <ApolloProvider client={apolloClient}>
+          <Topbar />
           <Router />
         </ApolloProvider>
       </ColorModeProvider>
